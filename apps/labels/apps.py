@@ -2,4 +2,5 @@ from django.apps import AppConfig
 
 
 class LabelsConfig(AppConfig):
-    name = 'apps.labels'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "apps.labels"

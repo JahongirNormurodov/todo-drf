@@ -2,19 +2,13 @@
 import os
 import sys
 
+
 def main():
-    os.environ.setdefault(
-        'DJANGO_SETTINGS_MODULE',
-        'config.settings.development'   # yoki config.settings.base
-    )
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError as exc:
-        raise ImportError(
-            "Django o‘rnatilmagan yoki virtual environment ishlamayapti"
-        ) from exc
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
+    from django.core.management import execute_from_command_line
+
     execute_from_command_line(sys.argv)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
-    
