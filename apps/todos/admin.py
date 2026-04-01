@@ -5,6 +5,6 @@ from apps.todos.models import Todo
 
 @admin.register(Todo)
 class TodoAdmin(admin.ModelAdmin):
-    list_display = ("id", "user", "title", "status", "priority", "due_date", "created_at")
+    list_display = ("id", "folder", "title", "status", "priority", "due_date", "created_at")
     list_filter = ("status", "priority", "created_at")
-    search_fields = ("title", "description", "user__username")
+    search_fields = ("title", "description")
